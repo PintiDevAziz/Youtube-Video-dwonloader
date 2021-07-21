@@ -8,9 +8,12 @@ export const MainContextProvider = ({ children }) => {
   const [ytVideoData, setYtVideoData] = useState({});
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const data = {
     inputVal,
     danger,
+    isDarkMode,
+    setIsDarkMode,
     setDanger,
     show,
     setShow,

@@ -5,7 +5,7 @@ import VideoContainer from "./components/videoContainer";
 const App = () => {
   return (
     <MainContextProvider>
-      <div className="App flex-col h-screen w-screen flex items-center justify-center">
+      <div className="App flex-col h-screen w-screen flex items-center justify-center dark:bg-[#333]">
         <Header />
         <VideoContainer />
       </div>
