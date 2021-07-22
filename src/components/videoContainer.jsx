@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { MainContext } from "../MainContext";
 import ContentLoader from "react-content-loader";
+import Loader from "./Loader";
 const VideoContainer = () => {
   const { ytVideoData, show, loading } = useContext(MainContext);
   return (
@@ -43,25 +44,9 @@ const VideoContainer = () => {
           </div>
         </div>
       ) : null}
-      {loading ? (
-        <ContentLoader
-          speed={2}
-          height={window.innerHeight - 400}
-          width={700}
-          viewBox="0 0 700 300"
-          backgroundColor="#c0bfbf"
-          foregroundColor="#e8e8e8"
-        >
-          <rect x="0" y="0" rx="0" ry="0" width="300" height="200" />
-          <rect x="450" y="30" rx="0" ry="0" width="150" height="10" />
-          <rect x="450" y="60" rx="0" ry="0" width="150" height="10" />
-          <rect x="450" y="90" rx="0" ry="0" width="150" height="10" />
-          <rect x="450" y="120" rx="0" ry="0" width="150" height="10" />
-          <rect x="450" y="150" rx="0" ry="0" width="150" height="10" />
-          <rect x="0" y="230" rx="0" ry="0" width="700" height="5" />
-          <rect x="250" y="260" rx="0" ry="0" width="200" height="40" />
-        </ContentLoader>
-      ) : null}
+      {loading ?
+        <Loader/>
+       : null}
     </>
   );
 };
